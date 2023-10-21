@@ -1,4 +1,4 @@
-resource "aws_security_group" "app" {
+resource "aws_security_group" "app_runner" {
   name   = var.name
   vpc_id = module.vpc.vpc_id
 
