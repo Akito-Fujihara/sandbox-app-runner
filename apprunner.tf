@@ -39,3 +39,9 @@ resource "aws_apprunner_auto_scaling_configuration_version" "app_runner" {
   max_size        = 3
   min_size        = 1
 }
+
+resource "aws_apprunner_custom_domain_association" "app_runner" {
+  domain_name           = "app-runner.${data.aws_route53_zone.main.name}"
+  service_arn           = aws_apprunner_service.main.arn
+  enable_www_subdomain  = false
+}

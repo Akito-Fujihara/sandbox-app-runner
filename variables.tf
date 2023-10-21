@@ -22,6 +22,6 @@ variable "private_subnet_cidrs" {
   default = ["10.0.101.0/24", "10.0.102.0/24"]
 }
 
-variable "ip_address" {
-  type = string
+variable "domain" {
+  type    = string
 }
